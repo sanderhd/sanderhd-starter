@@ -1,0 +1,27 @@
+{
+  "name": "sanderhd-starter",
+  "version": "1.0.0",
+  "description": "A CLI Project Starter",
+  "homepage": "https://github.com/sanderhd/sanderhd-starter#readme",
+  "bugs": {
+    "url": "https://github.com/sanderhd/sanderhd-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanderhd/sanderhd-starter.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "bin/index.js",
+  "bin": {
+    "sanderhd-starter": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^13.2.0"
+  }
+}
