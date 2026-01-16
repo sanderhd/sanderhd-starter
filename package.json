@@ -12,10 +12,10 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "bin/index.js",
   "bin": {
-    "sanderhd-starter": "./bin/index.js"
+    "sanderhd": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

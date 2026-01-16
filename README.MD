@@ -16,7 +16,7 @@ npm install -g sanderhd-starter
 After this, you can use 
 
 ```bash
-sanderhd-starter
+sanderhd
 ```
 anywhere you want!
 

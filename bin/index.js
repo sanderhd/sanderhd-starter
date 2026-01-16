@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 
-const prompts = require('@inquirer/prompts')
-const chalk = require('chalk');
-const { spawn, execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-const packageJson = require('../package.json');
+import { input, select } from '@inquirer/prompts';
+import chalk from 'chalk';
+import { spawn, execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+const packageJson = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
 
 if (process.argv.includes('--version')) {
     console.log(chalk.blue.bold(`sanderhd-starter v${packageJson.version}`));
@@ -43,7 +42,7 @@ console.clear();
 
         console.log(banner);
 
-        const feature = await prompts.select({
+        const feature = await select({
             message: 'Select starter:',
             choices: [
                 { name: 'NextJS Starter', value: 'nextjs' },
@@ -53,7 +52,7 @@ console.clear();
         });
 
         if (feature === 'nextjs') {
-            const appName = await prompts.input({
+            const appName = await input({
                 message: 'Enter a name for your Next.JS app:',
                 initial: 'my-next-app', 
             })
@@ -89,7 +88,7 @@ console.clear();
         }
 
         if (feature === 'discordjs-classic') {
-            const botName = await prompts.input({
+            const botName = await input({
                 message: 'Enter a message for your discord bot:',
                 initial: 'my-discord-bot'
             });
@@ -195,7 +194,7 @@ module.exports = {
         }
 
         if (feature === 'discordjs') {
-            const botName = await prompts.input({
+            const botName = await input({
                 message: 'Enter a name for your Discord bot:',
                 initial: 'my-discord-bot'
             });
